@@ -30,6 +30,8 @@
         <akka-actor_2.11-version>2.3.16</akka-actor_2.11-version>
         <!-- @link https://github.com/LMAX-Exchange/disruptor/wiki/Getting-Started -->
         <disruptor-version>3.3.6</disruptor-version>
+        <atomikos-version>4.0.4</atomikos-version>
+        <jta-version>1.1</jta-version>
         <!-- Maven plugins -->
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
         <maven-war-plugin.version>2.1.1</maven-war-plugin.version>
@@ -174,6 +176,43 @@
                 <groupId>com.lmax</groupId>
                 <artifactId>disruptor</artifactId>
                 <version>${disruptor-version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/javax.transaction/jta -->
+            <dependency>
+                <groupId>javax.transaction</groupId>
+                <artifactId>jta</artifactId>
+                <version>${jta-version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.atomikos/transactions-jdbc -->
+            <dependency>
+                <groupId>com.atomikos</groupId>
+                <artifactId>transactions-jdbc</artifactId>
+                <version>${atomikos-version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.atomikos/transactions-jta -->
+            <dependency>
+                <groupId>com.atomikos</groupId>
+                <artifactId>transactions-jta</artifactId>
+                <version>${atomikos-version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.atomikos/transactions-api -->
+            <dependency>
+                <groupId>com.atomikos</groupId>
+                <artifactId>transactions-api</artifactId>
+                <version>${atomikos-version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.atomikos/transactions -->
+            <dependency>
+                <groupId>com.atomikos</groupId>
+                <artifactId>transactions</artifactId>
+                <version>${atomikos-version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.atomikos/atomikos-util -->
+            <dependency>
+                <groupId>com.atomikos</groupId>
+                <artifactId>atomikos-util</artifactId>
+                <version>${atomikos-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
